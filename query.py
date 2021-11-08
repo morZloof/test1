@@ -7,7 +7,7 @@ connection = psycopg2.connect(user="morzloof",
                                   database="morzloof")
 connection.autocommit = True
 
-def querySelect(sql):
+def query_select(sql):
     cur = connection.cursor()
     try:
         cur.execute(sql)
@@ -25,7 +25,7 @@ def querySelect(sql):
     
     return res
 
-def queryInsert(sql):
+def query_insert(sql):
     cur = connection.cursor()
     try:
         cur.execute(sql)
